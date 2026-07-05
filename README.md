@@ -1,75 +1,73 @@
-# React + TypeScript + Vite
+# Personal Internship Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a cute web app designed for tracking internships. It keeps deadlines, interviews, companies, and more stored in one place.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Add internship applications
+* Edit existing applications
+* Delete applications
+* Filter applications by status
+* Search by company, role, or location
+* Save applications locally using `localStorage`
+* Cute sticky-note style application cards
 
-## React Compiler
+## Application Statuses
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Applications can be tracked using statuses like:
 
-## Expanding the ESLint configuration
+* Saved
+* Applied
+* Technical Assessment
+* Interview
+* Rejected
+* Offer
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* React
+* TypeScript
+* Vite
+* CSS
+* localStorage
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone the repository:
 
+```bash
+git clone https://github.com/YOUR-USERNAME/internship-tracker.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Go into the project folder:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd internship-tracker
 ```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL shown in the terminal.
+
+## Future Improvements
+
+* Sort applications by deadline or date added
+* Add deadline reminders
+* Add user authentication
+* Store applications in a real database
+* Deploy the app online
+* Add a dashboard with application stats
+
+## Why I Built This
+
+After trying out Google Sheets and other applications designed to track internships, none of them were quite what I was looking for. So, I decided to build one myself. This process was not easy, partly because I spent hours on aesthetic changes, but mostly because I challenged myself by adding features like filtering, searching, and browser storage.
