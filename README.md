@@ -36,7 +36,7 @@ Applications can be tracked using statuses like:
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/internship-tracker.git
+git clone https://github.com/yumengwei88/internship-tracker.git
 ```
 
 Go into the project folder:
