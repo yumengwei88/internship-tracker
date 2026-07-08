@@ -1,7 +1,7 @@
 export type ApplicationStatus =
   | "Saved"
   | "Applied"
-  | "Online Assessment"
+  | "Technical Assessment"
   | "Interview"
   | "Rejected"
   | "Offer";
