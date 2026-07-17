@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -410,6 +412,131 @@ select {
   outline: 2px solid #bfdbfe;
   border-color: #2563eb;
 }
+
+/* Auth page */
+
+.auth-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 45%, #ecfeff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 36px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+.auth-header {
+  text-align: center;
+  font-family: "Figtree", sans-serif;
+  margin-bottom: 28px;
+}
+
+.auth-label {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 6px 12px;
+  background: #dbeafe;
+  color: #2563eb;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  transform: translateY(-8px);
+}
+
+.auth-header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.auth-header p {
+  margin: 12px 0 0;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.auth-form label {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  background: #f8fafc;
+}
+
+.auth-form input:focus {
+  border-color: #2563eb;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.auth-message {
+  margin: 4px 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.auth-primary-button,
+.auth-secondary-button {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.auth-primary-button {
+  margin-top: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.25);
+}
+
+.auth-secondary-button {
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #0f172a;
+}
+
+.auth-primary-button:hover,
+.auth-secondary-button:hover {
+  transform: translateY(-1px);
+}
+
+.auth-primary-button:disabled,
+.auth-secondary-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {
