@@ -61,6 +61,7 @@ Open the local URL shown in the terminal.
 
 ## Future Improvements
 
+* Add seoerate page for account creation
 * Sort applications by deadline or date added
 * Add deadline reminders
 * Add user authentication
