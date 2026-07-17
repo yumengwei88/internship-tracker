@@ -17,11 +17,6 @@ function formatDate(date: string) {
 }
 
 function getStatusText(application: InternshipApplication) {
-  /*
-  if (!application.dateApplied) {
-    return "Waiting";
-  }
-    */
 
   if (application.status === "Applied") {
     return `Applied on ${formatDate(application.dateApplied)}`;
