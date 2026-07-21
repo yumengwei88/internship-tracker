@@ -121,7 +121,9 @@ function App() {
     return <p>Loading...</p>;
   }
 
-  if (!session) {
+ const bypassLogin = false;
+
+  if (!session && !bypassLogin) {
     return <Auth />;
   }
 
