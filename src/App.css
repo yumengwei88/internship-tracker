@@ -38,6 +38,7 @@ body {
   margin: 0;
   font-size: 40px;
   font-weight: 800;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .logout-button {
@@ -63,6 +64,7 @@ body {
   color: white;
   padding: 12px 18px;
   border-radius: 12px;
+  font-family: "Figtree", sans-serif;
   font-weight: 800;
   cursor: pointer;
   box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
@@ -96,6 +98,7 @@ body {
   margin: 0;
   font-size: 32px;
   font-weight: 800;
+  font-family: "Figtree", sans-serif;
 }
 
 .tracker-controls {
@@ -141,6 +144,7 @@ select {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
+  font-family: "Figtree", sans-serif;
 }
 
 .application-card:nth-child(2n) {
@@ -184,16 +188,18 @@ select {
 /* New sticky note format */
 
 .company-title {
-  margin: 0 0 22px;
+  margin: 0 0 2px;
   text-align: center;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1.15;
-  font-weight: 900;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 800;
 }
 
 .company-role {
-  margin: -12px 0 22px;
+  margin: 0 0 22px;
   text-align: center;
+  font-family: "Figtree", sans-serif;
   font-size: 16px;
   color: #414858;
   line-height: 1.3;
