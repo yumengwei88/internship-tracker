@@ -8,22 +8,23 @@ html,
 body,
 #root {
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0;
+  background: #e6eeea;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #f6f7fb;
-  color: #111827;
+  background: #e2eae3;
+  color: #0a0a15;
 }
 
 /* Header */
 
 .top-header {
   width: 100%;
-  background: white;
-  border-bottom: 3px solid #e5e7eb;
+  background: #d1e6d5;
+  border-bottom: 3px solid #b8dbbb;
   padding: 36px 24px;
   position: sticky;
   top: 0;
@@ -46,28 +47,47 @@ body {
   right: 48px;
   top: 50%;
   transform: translateY(-50%);
+
+  padding: 10px 16px;
+  border: 1px solid #d2dbd1;
+  background: #587e5b;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.logout-button:hover {
+  background: #fef2f2;
+  color: black;
+  transform: translateY(-50%) translateY(-1px);
+}
+
+.logout-button:active {
+  transform: translateY(-50%) translateY(0);
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.08);
 }
 
 /* Main layout */
 
 .app {
-  width: min(1180px, calc(100% - 80px));
-  margin: 0 auto;
-  padding: 36px 0 80px;
+  min-height: calc(100vh - 116px);
+  background: #e2eae3;
+  padding: 48px 64px;
 }
 
 /* Top button area */
 
 .primary-button {
   border: none;
-  background: #2563eb;
+  background: #587e5b;
   color: white;
   padding: 12px 18px;
-  border-radius: 12px;
+  border-radius: 7px;
   font-family: "Figtree", sans-serif;
   font-weight: 800;
   cursor: pointer;
-  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
 }
 
 .primary-button:hover {
@@ -110,10 +130,11 @@ body {
 
 select {
   width: 170px;
+  color: white;
   padding: 11px 12px;
   border: 1px solid #d1d5db;
-  border-radius: 10px;
-  background: white;
+  border-radius: 3px;
+  background: #587e5b;
   font-weight: 700;
   cursor: pointer;
   margin-right: 30px;
@@ -136,9 +157,8 @@ select {
   width: 300px;
   min-height: 340px;
   padding: 34px 22px 22px;
-  background: #fff7a8;
-  border: 1px solid #f3df73;
-  border-radius: 7px;
+  background: #e8d6ed;
+  border-radius: 3px;
   box-shadow: 0 14px 28px rgba(15, 23, 42, 0.18);
   transform: rotate(-1deg);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -147,22 +167,28 @@ select {
   font-family: "Figtree", sans-serif;
 }
 
-.application-card:nth-child(2n) {
-  background: #dbeafe;
-  border-color: #bfdbfe;
-  transform: rotate(1deg);
+.application-card.status-saved {
+  background: #E4E9EE;
 }
 
-.application-card:nth-child(3n) {
-  background: #dcfce7;
-  border-color: #bbf7d0;
-  transform: rotate(-0.7deg);
+.application-card.status-applied {
+  background: #DCEAF7;
 }
 
-.application-card:nth-child(4n) {
-  background: #fce7f3;
-  border-color: #fbcfe8;
-  transform: rotate(0.8deg);
+.application-card.status-interview {
+  background: #E9E1F5;
+}
+
+.application-card.status-technical-assessment {
+  background: #FDF3C4;
+}
+
+.application-card.status-offer {
+  background: #D9F2E3;
+}
+
+.application-card.status-rejected {
+  background: #F8E1E1;
 }
 
 .application-card:hover {
@@ -217,56 +243,7 @@ select {
   line-height: 1.4;
 }
 
-/* Support for old ApplicationCard JSX */
-
-.application-header {
-  display: block;
-  text-align: center;
-}
-
-.application-header h3 {
-  margin: 0 0 16px;
-  font-size: 24px;
-  font-weight: 900;
-}
-
-.application-header p {
-  margin: 0 0 10px;
-  color: #111827;
-}
-
-.application-details {
-  display: grid;
-  gap: 10px;
-  margin-top: 18px;
-}
-
-.application-details p {
-  margin: 0;
-  color: #111827;
-  font-size: 15px;
-  line-height: 1.4;
-}
-
-.notes {
-  margin: 10px 0 20px;
-  color: #111827;
-  font-size: 15px;
-  line-height: 1.4;
-}
-
-.application-card a {
-  color: #1d4ed8;
-  font-weight: 900;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.application-card a:hover {
-  text-decoration: underline;
-}
-
-/* Status colors */
+/* Status text colors */
 
 .status-text {
   font-weight: 700;
@@ -278,27 +255,27 @@ select {
 }
 
 .applied {
-  color: #2563eb;
+  color: #629aa4;
   background: transparent;
 }
 
 .technical-assessment {
-  color: #d97706;
+  color: #b96607;
   background: transparent;
 }
 
 .interview {
-  color: #7c3aed;
+  color: #350c7c;
   background: transparent;
 }
 
 .rejected {
-  color: #000000;
+  color: #575454;
   background: transparent;
 }
 
 .offer {
-  color: #16a34a;
+  color: #347e4f;
   background: transparent;
 }
 
@@ -316,8 +293,8 @@ select {
   width: min(520px, calc(100% - 32px));
   max-height: 90vh;
   overflow-y: auto;
-  background: white;
-  border-radius: 18px;
+  background: #e5eee9;
+  border-radius: 5px;
   padding: 24px;
   box-shadow: 0 24px 60px rgba(15, 23, 42, 0.3);
   display: grid;
@@ -371,10 +348,16 @@ select {
   gap: 28px;
 }
 
+.card-actions a {
+  color: #7253a9;
+  font-weight: 800;
+  font-size: 14px;
+}
+
 .delete-button {
   border: none;
   background: transparent;
-  color: #dc2626;
+  color: #c53333;
   font-weight: 800;
   cursor: pointer;
   padding: 0;
@@ -388,7 +371,7 @@ select {
 .edit-button {
   border: none;
   background: transparent;
-  color: #2563eb;
+  color: #7253a9;;
   font-weight: 800;
   cursor: pointer;
   padding: 0;
@@ -409,7 +392,7 @@ select {
   width: 240px;
   padding: 11px 12px;
   border: 1px solid #d1d5db;
-  border-radius: 10px;
+  border-radius: 3px;
   background: white;
   font: inherit;
 }
@@ -423,7 +406,12 @@ select {
 
 .auth-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 45%, #ecfeff 100%);
+  background: linear-gradient(
+    135deg,
+    #d1e6d5 0%,
+    #e2eae3 55%,
+    #eef4ef 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -433,10 +421,10 @@ select {
 .auth-card {
   width: 100%;
   max-width: 440px;
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: #f8fbf8;
+  border: 1px solid #bfd8c3;
   padding: 36px;
-  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 24px 60px rgba(65, 92, 69, 0.16);
 }
 
 .auth-header {
@@ -449,8 +437,8 @@ select {
   display: inline-block;
   margin: 0 0 12px;
   padding: 6px 12px;
-  background: #dbeafe;
-  color: #2563eb;
+  background: #d1e6d5;
+  color: #355c3d;
   border-radius: 999px;
   font-size: 14px;
   font-weight: 500;
@@ -466,7 +454,7 @@ select {
 
 .auth-header p {
   margin: 12px 0 0;
-  color: #64748b;
+  color: #64746b;
   line-height: 1.5;
 }
 
@@ -486,22 +474,22 @@ select {
 .auth-form input {
   width: 100%;
   padding: 14px 16px;
-  border: 1px solid #d1d5db;
-  border-radius: 12px;
+  border: 1px solid #bfd0c2;
+  border-radius: 5px;
   font-size: 16px;
   outline: none;
-  background: #f8fafc;
+  background: #f8fbf8;
 }
 
 .auth-form input:focus {
-  border-color: #2563eb;
+  border-color: #587e5b;
   background: white;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 0 0 4px rgba(88, 126, 91, 0.12);
 }
 
 .auth-message {
   margin: 4px 0;
-  color: #475569;
+  color: #b24545;
   font-size: 14px;
   line-height: 1.4;
 }
@@ -510,7 +498,7 @@ select {
 .auth-secondary-button {
   width: 100%;
   padding: 14px 18px;
-  border-radius: 12px;
+  border-radius: 3px;
   font-size: 16px;
   font-weight: 800;
   cursor: pointer;
@@ -520,15 +508,14 @@ select {
 .auth-primary-button {
   margin-top: 8px;
   border: none;
-  background: #2563eb;
+  background: #587e5b;
   color: white;
-  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.25);
 }
 
 .auth-secondary-button {
-  border: 1px solid #d1d5db;
+  border: 1px solid #bfd0c2;
   background: white;
-  color: #0f172a;
+  color: #355c3d;
 }
 
 .auth-primary-button:hover,
