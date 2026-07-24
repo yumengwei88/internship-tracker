@@ -122,12 +122,10 @@ function App() {
 
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, newSession) => {
+    } = supabase.auth.onAuthStateChange((event, newSession) => {
       setSession(newSession);
 
-      if (newSession) {
-        setApplicationsLoading(true);
-      } else {
+      if (event === "SIGNED_OUT") {
         setApplications([]);
         setApplicationsLoading(false);
       }
@@ -302,7 +300,7 @@ function App() {
     );
   }
 
-const bypassLogin = false;
+  const bypassLogin = false;
 
   if (loading) {
     return <p>Loading...</p>;
