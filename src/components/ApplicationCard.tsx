@@ -38,7 +38,7 @@ function ApplicationCard({
   const isNotAppliedYet = !application.dateApplied;
 
   return (
-    <div className="application-card">
+    <div className={`application-card status-${statusClass}`}>
       <h3 className="company-title">{application.company}</h3>
       <p className="company-role">{application.role}</p>
 
