@@ -84,7 +84,6 @@ body {
   background: #587e5b;
   color: white;
   padding: 12px 18px;
-  border-radius: 7px;
   font-family: "Figtree", sans-serif;
   font-weight: 800;
   cursor: pointer;
@@ -135,6 +134,7 @@ select {
   border: 1px solid #d1d5db;
   border-radius: 3px;
   background: #587e5b;
+  font-family: "Figtree", sans-serif;
   font-weight: 700;
   cursor: pointer;
   margin-right: 30px;
@@ -155,12 +155,11 @@ select {
 .application-card {
   position: relative;
   width: 300px;
-  min-height: 340px;
+  min-height: 320px;
   padding: 34px 22px 22px;
   background: #e8d6ed;
   border-radius: 3px;
   box-shadow: 0 14px 28px rgba(15, 23, 42, 0.18);
-  transform: rotate(-1deg);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
@@ -406,12 +405,7 @@ select {
 
 .auth-page {
   min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    #d1e6d5 0%,
-    #e2eae3 55%,
-    #eef4ef 100%
-  );
+  background: #e2eae3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -420,11 +414,10 @@ select {
 
 .auth-card {
   width: 100%;
-  max-width: 440px;
+  max-width: 500px;
   background: #f8fbf8;
   border: 1px solid #bfd8c3;
   padding: 36px;
-  box-shadow: 0 24px 60px rgba(65, 92, 69, 0.16);
 }
 
 .auth-header {
