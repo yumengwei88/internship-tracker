@@ -61,12 +61,8 @@ export default function Auth() {
     <div className="auth-page">
       <div className="auth-card">
         <div className="auth-header">
-          <p className="auth-label">Internship Tracker</p>
-          <h1>Welcome!</h1>
-          <p>
-            Log in or create an account to keep track of your applications,
-            interviews, and deadlines.
-          </p>
+          <h1>Welcome To Internship Tracker!</h1>
+          <p>Log in or create an account to get started</p>
         </div>
 
         <div className="auth-form">
