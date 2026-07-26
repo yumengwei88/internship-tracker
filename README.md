@@ -62,10 +62,9 @@ Open the local URL shown in the terminal.
 ## Future Improvements
 
 * Add seoerate page for account creation
+* Add account profile
 * Sort applications by deadline or date added
 * Add deadline reminders
-* Add user authentication
-* Store applications in a real database
 * Deploy the app online
 * Add a dashboard with application stats
 
