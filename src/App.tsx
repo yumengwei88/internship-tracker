@@ -373,14 +373,24 @@ function App() {
           </div>
 
           <div className="applications-list">
-            {filteredApplications.map((application) => (
-              <ApplicationCard
-                key={application.id}
-                application={application}
-                onDeleteApplication={handleDeleteApplication}
-                onEditApplication={handleEditApplication}
+            {applications.length === 0 ? (
+              <div className="no-applications-message">
+              <p> Click "Add +" to create an application~</p>
+              </div>
+            ) : filteredApplications.length === 0 ? (
+              <div className="no-applications-message">
+                <p>No matching results</p>
+              </div>
+            ) : (
+              filteredApplications.map((application) => (
+               <ApplicationCard
+                 key={application.id}
+                 application={application}
+                 onDeleteApplication={handleDeleteApplication}
+                 onEditApplication={handleEditApplication}
               />
-            ))}
+            ))
+          )}
           </div>
         </section>
       </main>
